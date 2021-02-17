@@ -1,0 +1,17 @@
+@import "../SCSS/colors.scss";
+@import "../SCSS/utils.scss";
+
+.cart {
+  background-color: $gray;
+  padding: 1rem;
+
+  .cart__content {
+    display: flex;
+  }
+
+  @media (max-width: 1000px) {
+    .cart__content {
+      flex-direction: column !important;
+    }
+  }
+}

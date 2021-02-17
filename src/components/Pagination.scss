@@ -1,0 +1,34 @@
+@import "../SCSS/colors.scss";
+@import "../SCSS/utils.scss";
+
+.pagination__container {
+  @include FLEX;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  left: 0;
+  right: 0;
+  bottom: 2rem;
+  justify-content: center;
+
+  .pagination {
+    background-color: $blue;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
+    margin: 0 1rem;
+    cursor: pointer;
+  }
+
+  .pagination__active {
+    border: 3px solid $blue;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    transition: all 200ms ease-in-out;
+    margin: 0 1rem;
+    cursor: pointer;
+  }
+}

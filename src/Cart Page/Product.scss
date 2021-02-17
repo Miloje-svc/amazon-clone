@@ -1,0 +1,134 @@
+@import "../SCSS/colors.scss";
+@import "../SCSS/utils.scss";
+
+.product {
+  @include FLEX;
+  position: relative;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid lightgray;
+
+  .product__image {
+    cursor: pointer;
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+    }
+  }
+
+  .product__description {
+    width: 40%;
+    margin-left: 2rem;
+
+    h4 {
+      color: $orange;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .product__qty--container {
+    @include FLEX;
+    justify-content: space-between;
+    width: 90px;
+    padding: 0.3rem 0.4rem;
+    border-radius: 100px;
+    margin-top: 1rem;
+    border: 1px solid lightgray;
+
+    p {
+      color: $orange;
+      font-weight: 500;
+    }
+
+    .MuiSvgIcon-root {
+      cursor: pointer;
+    }
+  }
+
+  .product__delete--btn {
+    @include GRID;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 100ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .product__description {
+    width: 60% !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .product__description {
+    width: 60% !important;
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .product__description {
+    p {
+      font-size: 0.9rem;
+      width: 250px;
+      white-space: nowrap !important;
+      overflow: hidden;
+      text-overflow: ellipsis !important;
+    }
+  }
+
+  .product__image {
+    img {
+      width: 100px !important;
+      height: 100px !important;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .product__description {
+    p {
+      font-size: 0.8rem;
+      width: 200px;
+      white-space: nowrap !important;
+      overflow: hidden;
+      text-overflow: ellipsis !important;
+    }
+  }
+
+  .product__image {
+    img {
+      width: 80px !important;
+      height: 80px !important;
+    }
+  }
+
+  .product__delete--btn {
+    top: 0 !important;
+    right: 0 !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .product {
+    flex-direction: column !important;
+  }
+
+  .product__description {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}

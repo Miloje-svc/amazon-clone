@@ -1,0 +1,9 @@
+@mixin GRID {
+  display: grid;
+  place-items: center;
+}
+
+@mixin FLEX {
+  display: flex;
+  align-items: center;
+}

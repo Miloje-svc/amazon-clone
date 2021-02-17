@@ -1,0 +1,53 @@
+@import "../SCSS/colors.scss";
+@import "../SCSS/utils.scss";
+
+.slides__container {
+  width: 100%;
+  z-index: 100;
+  position: relative;
+
+  div {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+
+    .slides__icon {
+      @include GRID;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      width: 100px;
+      height: 100px;
+      z-index: 100;
+      color: #232f3e;
+
+      .MuiSvgIcon-root {
+        width: 80px !important;
+        height: 80px !important;
+      }
+    }
+
+    .left {
+      left: 1rem;
+    }
+
+    .right {
+      right: 1rem;
+    }
+
+    .slide {
+      min-width: 100%;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

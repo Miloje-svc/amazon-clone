@@ -1,0 +1,15 @@
+.home {
+  width: 100%;
+  background-color: #eaeded;
+}
+
+.cards__container {
+  margin: auto;
+  width: 100%;
+  max-width: 1300px;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
